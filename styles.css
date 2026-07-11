@@ -207,7 +207,7 @@ textarea {
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.8rem, 5vw, 4.9rem);
+  font-size: clamp(2.4rem, 4.2vw, 4rem);
 }
 
 .hero-description,
@@ -489,6 +489,12 @@ textarea {
 
 .pricing-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card .button {
+  margin-top: auto;
 }
 
 .featured-pricing {
