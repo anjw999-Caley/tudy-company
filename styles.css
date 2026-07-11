@@ -525,6 +525,12 @@ textarea {
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+.pricing-card ul {
+  flex: 1 1 auto;
+  margin-bottom: 24px;
 }
 
 .pricing-card .button {
@@ -533,7 +539,8 @@ textarea {
 
 .featured-pricing {
   background: linear-gradient(180deg, #ffffff, #eefcfc);
-  transform: translateY(-8px);
+  border-color: rgba(13, 143, 157, 0.28);
+  box-shadow: 0 24px 50px rgba(13, 143, 157, 0.18);
 }
 
 .pricing-badge {
