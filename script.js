@@ -6,6 +6,62 @@ const contactSubmitFrame = document.querySelector('iframe[name="contact-submit-f
 
 let isSubmittingContact = false;
 
+function showValidationError(field, message) {
+  field.focus();
+  window.alert(message);
+}
+
+function validateContactForm(form) {
+  const name = form.querySelector('input[name="name"]');
+  const academy = form.querySelector('input[name="academy"]');
+  const phone = form.querySelector('input[name="phone"]');
+  const email = form.querySelector('input[name="email"]');
+
+  const nameValue = name?.value.trim() || "";
+  const academyValue = academy?.value.trim() || "";
+  const phoneValue = phone?.value.trim() || "";
+  const emailValue = email?.value.trim() || "";
+
+  if (!nameValue) {
+    showValidationError(name, "이름을 입력해주세요.");
+    return false;
+  }
+
+  if (nameValue.length < 2) {
+    showValidationError(name, "이름은 2자 이상 입력해주세요.");
+    return false;
+  }
+
+  if (!academyValue) {
+    showValidationError(academy, "학원명을 입력해주세요.");
+    return false;
+  }
+
+  if (!phoneValue) {
+    showValidationError(phone, "연락처를 입력해주세요.");
+    return false;
+  }
+
+  const normalizedPhone = phoneValue.replace(/[^0-9]/g, "");
+  if (normalizedPhone.length < 9 || normalizedPhone.length > 11) {
+    showValidationError(phone, "연락처 형식이 올바르지 않습니다.");
+    return false;
+  }
+
+  if (!emailValue) {
+    showValidationError(email, "이메일을 입력해주세요.");
+    return false;
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(emailValue)) {
+    showValidationError(email, "이메일 형식이 올바르지 않습니다.");
+    return false;
+  }
+
+  return true;
+}
+
 if (menuToggle && header) {
   menuToggle.addEventListener("click", () => {
     const isOpen = header.classList.toggle("nav-open");
@@ -25,7 +81,12 @@ navLinks.forEach((link) => {
 });
 
 if (contactForm) {
-  contactForm.addEventListener("submit", () => {
+  contactForm.addEventListener("submit", (event) => {
+    if (!validateContactForm(contactForm)) {
+      event.preventDefault();
+      return;
+    }
+
     const submitButton = contactForm.querySelector('button[type="submit"]');
 
     isSubmittingContact = true;
