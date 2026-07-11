@@ -1,164 +1,468 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tudy Company</title>
-    <meta name="description" content="학원 운영, 수업 관리, 숙제 관리, 성적 분석을 한 번에 돕는 Tudy 소개 페이지">
-  <script type="module" crossorigin src="/assets/index-CdFPVgvc.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-D0Ki4FAg.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUDY | 수업은 가르치고, 운영은 투디.</title>
+  <meta
+    name="description"
+    content="출결, 숙제, 피드백, 성적, 상담까지 하나의 플랫폼에서 관리하는 학원 운영 관리 서비스 TUDY 소개 페이지입니다."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SUIT:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-BD-ZrUPr.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-COczXyRj.css">
 </head>
 <body>
+  <div class="page-shell">
     <header class="site-header">
-        <div class="brand">
-            <span class="brand-mark">T</span>
-            <div>
-                <strong>Tudy</strong>
-                <span>Academy Operating System</span>
-            </div>
-        </div>
-        <nav class="site-nav">
-            <a href="#about">소개</a>
-            <a href="#features">기능</a>
-            <a href="#process">도입 절차</a>
-            <a href="#contact">문의</a>
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="TUDY 홈">
+          <span class="brand-mark">T</span>
+          <span class="brand-text">TUDY</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          메뉴
+        </button>
+        <nav class="site-nav" id="site-nav">
+          <a href="#home">HOME</a>
+          <a href="#about">서비스 소개</a>
+          <a href="#features">기능</a>
+          <a href="#pricing">요금안내</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">문의하기</a>
         </nav>
+        <div class="header-actions">
+          <a class="button button-primary" href="#contact">무료체험 시작하기</a>
+        </div>
+      </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-copy">
-                <p class="eyebrow">All-in-one academy workflow</p>
-                <h1>학원 운영을 더 간결하고<br>더 선명하게 관리하는 Tudy</h1>
-                <p class="hero-text">
-                    출결, 숙제, 상담, 성적, 알림까지 분산된 운영 흐름을 하나로 묶어
-                    원장님과 선생님이 학생 성장에 더 집중할 수 있도록 돕습니다.
-                </p>
-                <div class="hero-actions">
-                    <a class="button primary" href="#contact">도입 문의하기</a>
-                    <a class="button secondary" href="#features">기능 살펴보기</a>
-                </div>
+      <section class="hero-section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">학원 운영 관리 플랫폼</p>
+            <h1>수업은 가르치고,<br>운영은 투디.</h1>
+            <p class="hero-description">
+              수업관리부터 출결, 숙제, 피드백, 성적관리까지 원장과 선생님, 학생과 학부모를 하나로 연결하는 학원 관리 플랫폼
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary button-large" href="#contact">무료체험 시작하기</a>
+              <a class="button button-ghost button-large" href="#features">서비스 둘러보기</a>
             </div>
-            <div class="hero-panel">
-                <div class="hero-card hero-card-large">
-                    <span>운영 현황</span>
-                    <strong>실시간 학원 대시보드</strong>
-                    <p>수업 일정, 숙제 제출, 성적 변동, 상담 예약을 한 화면에서 확인합니다.</p>
-                </div>
-                <div class="hero-grid">
-                    <article class="hero-card">
-                        <span>출결</span>
-                        <strong>자동 공유</strong>
-                        <p>학생과 학부모에게 빠르게 전달됩니다.</p>
-                    </article>
-                    <article class="hero-card">
-                        <span>성적</span>
-                        <strong>추이 분석</strong>
-                        <p>평균 기반 그래프로 성장 흐름을 확인합니다.</p>
-                    </article>
-                </div>
+            <div class="hero-metrics">
+              <div class="metric-card">
+                <strong>하나의 흐름</strong>
+                <span>수업, 관리, 소통을 한 화면에서</span>
+              </div>
+              <div class="metric-card">
+                <strong>모바일 최적화</strong>
+                <span>학생과 학부모도 바로 확인</span>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="hero-dashboard" aria-label="서비스 예시 대시보드">
+            <div class="dashboard-frame">
+              <div class="dashboard-topbar">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="dashboard-grid">
+                <article class="dashboard-card dashboard-card-large">
+                  <p class="dashboard-label">오늘 수업</p>
+                  <strong>8개 수업 진행 예정</strong>
+                  <ul>
+                    <li>14:00 초등 영어 문법</li>
+                    <li>16:00 중등 수학 심화</li>
+                    <li>19:00 고등 내신 관리</li>
+                  </ul>
+                </article>
+                <article class="dashboard-card alert-card">
+                  <p class="dashboard-label">결석 알림</p>
+                  <strong>2명 확인 필요</strong>
+                  <span>학부모 알림 발송 완료</span>
+                </article>
+                <article class="dashboard-card">
+                  <p class="dashboard-label">미제출 숙제</p>
+                  <strong>5건</strong>
+                  <span>학생별 제출 현황 추적</span>
+                </article>
+                <article class="dashboard-card">
+                  <p class="dashboard-label">최근 피드백</p>
+                  <strong>오늘 12건 작성</strong>
+                  <span>수업별 기록 자동 정리</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="about" class="section">
-            <div class="section-heading">
-                <p class="eyebrow">Why Tudy</p>
-                <h2>학원 현장에서 바로 쓰이는 운영 구조</h2>
-                <p>직관적인 권한별 화면과 빠른 관리 흐름으로 운영 부담을 줄입니다.</p>
-            </div>
-            <div class="info-grid">
-                <article class="info-card">
-                    <strong>권한별 맞춤 화면</strong>
-                    <p>관리자, 원장, 선생님, 학생, 학부모가 각자 필요한 메뉴만 보도록 설계합니다.</p>
-                </article>
-                <article class="info-card">
-                    <strong>운영 데이터 통합</strong>
-                    <p>출결, 숙제, 성적, 상담 이력을 하나의 흐름으로 연결해 관리합니다.</p>
-                </article>
-                <article class="info-card">
-                    <strong>모바일 중심 사용성</strong>
-                    <p>학생과 학부모도 모바일에서 숙제, 피드백, 공지, 출결을 편하게 확인할 수 있습니다.</p>
-                </article>
-            </div>
-        </section>
+      <section class="section" id="pain-points">
+        <div class="container">
+          <div class="section-heading center">
+            <p class="eyebrow">공감 포인트</p>
+            <h2>이런 고민 있으신가요?</h2>
+          </div>
+          <div class="grid grid-4">
+            <article class="info-card">
+              <span class="role-badge">원장</span>
+              <p>학생이 많아질수록 관리가 어렵다.</p>
+            </article>
+            <article class="info-card">
+              <span class="role-badge">선생님</span>
+              <p>출결, 숙제, 피드백을 카톡과 종이로 따로 관리한다.</p>
+            </article>
+            <article class="info-card">
+              <span class="role-badge">학부모</span>
+              <p>우리 아이의 수업 상황과 숙제 여부를 바로 확인하기 어렵다.</p>
+            </article>
+            <article class="info-card">
+              <span class="role-badge">학생</span>
+              <p>오늘 수업과 숙제를 놓치기 쉽다.</p>
+            </article>
+          </div>
+          <p class="section-footnote">투디가 학원 운영의 흐름을 하나로 정리해드립니다.</p>
+        </div>
+      </section>
 
-        <section id="features" class="section surface">
-            <div class="section-heading">
-                <p class="eyebrow">Features</p>
-                <h2>운영에 필요한 기능을 한 곳에</h2>
-            </div>
-            <div class="feature-list">
-                <article class="feature-item">
-                    <strong>수업 및 시간표 관리</strong>
-                    <p>수업 그룹, 일정, 담당 선생님 배치를 명확하게 관리합니다.</p>
-                </article>
-                <article class="feature-item">
-                    <strong>숙제 및 제출 현황</strong>
-                    <p>등록, 제출, 재제출 요청, 댓글 피드백까지 한 흐름으로 처리합니다.</p>
-                </article>
-                <article class="feature-item">
-                    <strong>성적 분석</strong>
-                    <p>시험별 상세 성적과 최근 추이 그래프로 학생의 성장을 한눈에 파악합니다.</p>
-                </article>
-                <article class="feature-item">
-                    <strong>알림 및 상담 관리</strong>
-                    <p>중요 일정과 안내사항을 권한별로 빠르게 전달하고 상담 이력을 기록합니다.</p>
-                </article>
-            </div>
-        </section>
+      <section class="section section-tinted" id="about">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">서비스 소개</p>
+            <h2>학원 운영에 필요한 기능을 하나로</h2>
+            <p>
+              투디는 원장, 선생님, 학생, 학부모가 각자의 화면에서 수업, 출결, 숙제, 피드백, 성적, 상담 정보를 확인하고 관리할 수 있는 학원 운영 플랫폼입니다.
+            </p>
+          </div>
+          <div class="pill-grid">
+            <span>학원 운영 관리</span>
+            <span>수업 스케줄 관리</span>
+            <span>출결 관리</span>
+            <span>숙제 관리</span>
+            <span>피드백 관리</span>
+            <span>성적 관리</span>
+            <span>상담 관리</span>
+            <span>학생/학부모 알림</span>
+          </div>
+        </div>
+      </section>
 
-        <section id="process" class="section">
-            <div class="section-heading">
-                <p class="eyebrow">Process</p>
-                <h2>도입은 간단하고 운영은 안정적으로</h2>
-            </div>
-            <div class="timeline">
-                <article class="timeline-step">
-                    <span>01</span>
-                    <strong>운영 방식 파악</strong>
-                    <p>현재 학원 운영 구조와 필요한 권한/기능을 함께 정리합니다.</p>
-                </article>
-                <article class="timeline-step">
-                    <span>02</span>
-                    <strong>화면 구성 설계</strong>
-                    <p>원장, 선생님, 학생, 학부모 화면 흐름을 실제 운영 방식에 맞춰 조정합니다.</p>
-                </article>
-                <article class="timeline-step">
-                    <span>03</span>
-                    <strong>적용 및 사용 시작</strong>
-                    <p>필요 기능을 적용한 뒤 바로 사용할 수 있도록 빠르게 오픈합니다.</p>
-                </article>
-            </div>
-        </section>
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">주요 기능</p>
+            <h2>투디의 주요 기능</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>수업 관리</h3>
+              <ul>
+                <li>수업 생성</li>
+                <li>학생 배정</li>
+                <li>선생님 배정</li>
+                <li>일/주/월 일정 관리</li>
+              </ul>
+            </article>
+            <article class="feature-card">
+              <h3>출결 관리</h3>
+              <ul>
+                <li>원클릭 결석 처리</li>
+                <li>학생 알림</li>
+                <li>학부모 알림</li>
+                <li>수업별 출석부</li>
+              </ul>
+            </article>
+            <article class="feature-card">
+              <h3>숙제 관리</h3>
+              <ul>
+                <li>숙제 등록</li>
+                <li>이미지 첨부</li>
+                <li>제출 여부 확인</li>
+                <li>학생별 숙제 확인</li>
+              </ul>
+            </article>
+            <article class="feature-card">
+              <h3>피드백 관리</h3>
+              <ul>
+                <li>수업별 피드백 작성</li>
+                <li>학생별 피드백 기록</li>
+                <li>이미지 첨부</li>
+                <li>학부모 확인</li>
+              </ul>
+            </article>
+            <article class="feature-card">
+              <h3>성적 관리</h3>
+              <ul>
+                <li>시험 등록</li>
+                <li>과목별 성적 입력</li>
+                <li>성적표 확인</li>
+                <li>학생/학부모 공개 설정</li>
+              </ul>
+            </article>
+            <article class="feature-card">
+              <h3>상담 관리</h3>
+              <ul>
+                <li>신규 상담 등록</li>
+                <li>상담 이력 관리</li>
+                <li>상태 관리</li>
+                <li>등록 전환 관리</li>
+              </ul>
+            </article>
+            <article class="feature-card">
+              <h3>알림센터</h3>
+              <ul>
+                <li>출결 알림</li>
+                <li>숙제 알림</li>
+                <li>성적 알림</li>
+                <li>공지 알림</li>
+              </ul>
+            </article>
+            <article class="feature-card">
+              <h3>대시보드</h3>
+              <ul>
+                <li>오늘 수업</li>
+                <li>담당 학생</li>
+                <li>결석 현황</li>
+                <li>미제출 숙제</li>
+                <li>최근 피드백</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <section id="contact" class="section contact-section">
-            <div class="section-heading">
-                <p class="eyebrow">Contact</p>
-                <h2>Tudy 도입 문의</h2>
-                <p>관심 있는 운영 방식이나 필요한 기능을 남겨주시면 확인 후 연락드립니다.</p>
+      <section class="section section-tinted" id="roles">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">사용자별 기능</p>
+            <h2>사용자별로 필요한 기능만 쉽게</h2>
+          </div>
+          <div class="grid grid-4">
+            <article class="role-card">
+              <h3>원장</h3>
+              <ul>
+                <li>학원 관리</li>
+                <li>선생님 관리</li>
+                <li>학생 관리</li>
+                <li>상담 관리</li>
+                <li>성적 관리</li>
+                <li>통계 확인</li>
+              </ul>
+            </article>
+            <article class="role-card">
+              <h3>선생님</h3>
+              <ul>
+                <li>오늘 수업 확인</li>
+                <li>출결 처리</li>
+                <li>숙제 등록</li>
+                <li>피드백 작성</li>
+                <li>성적 입력</li>
+              </ul>
+            </article>
+            <article class="role-card">
+              <h3>학생</h3>
+              <ul>
+                <li>오늘 수업 확인</li>
+                <li>숙제 확인</li>
+                <li>피드백 확인</li>
+                <li>성적 확인</li>
+                <li>알림 확인</li>
+              </ul>
+            </article>
+            <article class="role-card">
+              <h3>학부모</h3>
+              <ul>
+                <li>자녀 스케줄 확인</li>
+                <li>숙제 확인</li>
+                <li>피드백 확인</li>
+                <li>성적 확인</li>
+                <li>결석 알림 확인</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reasons">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">선택 이유</p>
+            <h2>왜 투디를 선택해야 할까요?</h2>
+          </div>
+          <div class="grid grid-5">
+            <article class="reason-card">카카오톡 대신 체계적인 수업 관리</article>
+            <article class="reason-card">종이 출석부 대신 디지털 출결 관리</article>
+            <article class="reason-card">엑셀 대신 자동화된 학생 관리</article>
+            <article class="reason-card">학부모에게 실시간 알림 제공</article>
+            <article class="reason-card">모바일에서 언제 어디서나 확인 가능</article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="process">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">이용 절차</p>
+            <h2>도입은 간단합니다</h2>
+          </div>
+          <div class="steps">
+            <article class="step-card"><span>STEP 1</span><strong>무료체험 신청</strong></article>
+            <article class="step-card"><span>STEP 2</span><strong>학원 등록</strong></article>
+            <article class="step-card"><span>STEP 3</span><strong>선생님 초대</strong></article>
+            <article class="step-card"><span>STEP 4</span><strong>학생 등록</strong></article>
+            <article class="step-card"><span>STEP 5</span><strong>수업 운영 시작</strong></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">요금안내</p>
+            <h2>학원 규모에 맞는 요금제</h2>
+          </div>
+          <div class="pricing-grid">
+            <article class="pricing-card">
+              <h3>Starter</h3>
+              <p class="price">월 29,900원</p>
+              <p class="pricing-target">소규모 학원 추천</p>
+              <ul>
+                <li>수업 관리</li>
+                <li>출결 관리</li>
+                <li>숙제 관리</li>
+                <li>피드백 관리</li>
+                <li>학생/학부모 알림</li>
+                <li>무료체험 가능</li>
+              </ul>
+              <a class="button button-secondary full-width" href="#contact">무료체험 시작하기</a>
+            </article>
+            <article class="pricing-card featured-pricing">
+              <div class="pricing-badge">추천</div>
+              <h3>Basic</h3>
+              <p class="price">월 59,900원</p>
+              <p class="pricing-target">성장 중인 학원 추천</p>
+              <ul>
+                <li>Starter 전체 기능</li>
+                <li>성적 관리</li>
+                <li>상담 관리</li>
+                <li>대시보드</li>
+                <li>통계 기능</li>
+                <li>무료체험 가능</li>
+              </ul>
+              <a class="button button-primary full-width" href="#contact">무료체험 시작하기</a>
+            </article>
+            <article class="pricing-card">
+              <h3>Enterprise</h3>
+              <p class="price">협의</p>
+              <p class="pricing-target">대형 학원/프랜차이즈 추천</p>
+              <ul>
+                <li>Basic 전체 기능</li>
+                <li>다지점 관리</li>
+                <li>맞춤 기능 협의</li>
+                <li>데이터 이전 협의</li>
+                <li>전담 지원</li>
+              </ul>
+              <a class="button button-ghost full-width" href="#contact">문의하기</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="faq">
+        <div class="container narrow">
+          <div class="section-heading center">
+            <p class="eyebrow">FAQ</p>
+            <h2>자주 묻는 질문</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary>Q. 무료체험이 가능한가요?</summary>
+              <p>A. 네, 무료체험 신청 후 일정 기간 동안 서비스를 사용해볼 수 있습니다.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Q. 학생과 학부모도 사용할 수 있나요?</summary>
+              <p>A. 네, 학생과 학부모도 각자의 화면에서 수업, 숙제, 피드백, 성적, 알림을 확인할 수 있습니다.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Q. 선생님 계정도 따로 만들 수 있나요?</summary>
+              <p>A. 네, 원장이 선생님을 초대하거나 등록하여 수업을 배정할 수 있습니다.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Q. 모바일에서도 사용할 수 있나요?</summary>
+              <p>A. 네, 모바일 웹 환경에서도 사용할 수 있도록 반응형으로 구현합니다.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Q. 기존 학원 데이터를 이전할 수 있나요?</summary>
+              <p>A. 데이터 이전은 학원 상황에 따라 협의 가능합니다.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy">
+            <p class="eyebrow">문의하기</p>
+            <h2>투디 무료체험을 신청해보세요</h2>
+            <p>
+              학원 운영 흐름을 더 가볍고 선명하게 정리하고 싶다면, 지금 무료 상담을 신청해보세요.
+            </p>
+            <div class="contact-highlights">
+              <div>무료체험 안내</div>
+              <div>학원 규모별 맞춤 상담</div>
+              <div>데이터 이전 협의 가능</div>
             </div>
-            <form class="contact-form" id="contactForm">
-                <label>
-                    <span>이름</span>
-                    <input type="text" name="name" placeholder="이름을 입력해주세요" required>
-                </label>
-                <label>
-                    <span>연락처</span>
-                    <input type="text" name="phone" placeholder="연락 가능한 번호를 입력해주세요" required>
-                </label>
-                <label>
-                    <span>이메일</span>
-                    <input type="email" name="email" placeholder="이메일을 입력해주세요">
-                </label>
-                <label>
-                    <span>문의 내용</span>
-                    <textarea name="message" rows="5" placeholder="현재 운영 중인 학원 규모나 필요한 기능을 적어주세요" required></textarea>
-                </label>
-                <button class="button primary" type="submit">문의 남기기</button>
-                <p class="form-status" id="formStatus">현재는 정적 프로젝트로 구성되어 있어 문의 저장 기능은 연결 전 상태입니다.</p>
-            </form>
-        </section>
+          </div>
+          <form class="contact-form">
+            <label>
+              이름
+              <input type="text" name="name" placeholder="이름을 입력하세요">
+            </label>
+            <label>
+              학원명
+              <input type="text" name="academy" placeholder="학원명을 입력하세요">
+            </label>
+            <label>
+              연락처
+              <input type="tel" name="phone" placeholder="연락처를 입력하세요">
+            </label>
+            <label>
+              이메일
+              <input type="email" name="email" placeholder="이메일을 입력하세요">
+            </label>
+            <label>
+              학생 수
+              <input type="text" name="studentCount" placeholder="예: 80명">
+            </label>
+            <label>
+              문의 내용
+              <textarea name="message" rows="5" placeholder="도입 목적이나 궁금한 내용을 남겨주세요"></textarea>
+            </label>
+            <button class="button button-primary full-width" type="submit">무료 상담 신청</button>
+          </form>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>TUDY</strong>
+          <p>수업은 가르치고, 운영은 투디.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">개인정보처리방침</a>
+          <a href="#home">이용약관</a>
+          <a href="mailto:anjw999@gmail.com">문의: anjw999@gmail.com</a>
+        </div>
+        <p>© TUDY. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
 
 </body>
 </html>

@@ -1,12 +1,63 @@
-const contactForm = document.getElementById("contactForm");
-const formStatus = document.getElementById("formStatus");
+const header = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelectorAll(".site-nav a, .header-actions a");
+const contactForm = document.querySelector(".contact-form");
 
-if (contactForm && formStatus) {
-    contactForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const formData = new FormData(contactForm);
-        const name = String(formData.get("name") || "").trim();
+if (menuToggle && header) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = header.classList.toggle("nav-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+}
 
-        formStatus.textContent = `${name || "문의자"}님의 내용이 입력되었습니다. 실제 전송 기능은 이후 API 또는 메일 연동으로 연결하면 됩니다.`;
-    });
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (header && header.classList.contains("nav-open")) {
+      header.classList.remove("nav-open");
+      if (menuToggle) {
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
+});
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const formData = new FormData(contactForm);
+    const payload = Object.fromEntries(formData.entries());
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "전송 중...";
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "전송에 실패했습니다.");
+      }
+
+      window.alert(result.message || "무료체험 신청이 전송되었습니다.");
+      contactForm.reset();
+    } catch (error) {
+      window.alert(error.message || "메일 전송에 실패했습니다.");
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = "무료 상담 신청";
+      }
+    }
+  });
 }
