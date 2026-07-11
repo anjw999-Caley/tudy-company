@@ -2,6 +2,7 @@ const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelectorAll(".site-nav a, .header-actions a");
 const contactForm = document.querySelector(".contact-form");
+const searchParams = new URLSearchParams(window.location.search);
 
 if (menuToggle && header) {
   menuToggle.addEventListener("click", () => {
@@ -22,42 +23,24 @@ navLinks.forEach((link) => {
 });
 
 if (contactForm) {
-  contactForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
+  contactForm.addEventListener("submit", () => {
     const submitButton = contactForm.querySelector('button[type="submit"]');
-    const formData = new FormData(contactForm);
-    const payload = Object.fromEntries(formData.entries());
 
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.textContent = "전송 중...";
     }
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.message || "전송에 실패했습니다.");
-      }
-
-      window.alert(result.message || "무료체험 신청이 전송되었습니다.");
-      contactForm.reset();
-    } catch (error) {
-      window.alert(error.message || "메일 전송에 실패했습니다.");
-    } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = "무료 상담 신청";
-      }
-    }
   });
+}
+
+if (searchParams.get("submitted") === "1") {
+  window.alert("무료체험 신청이 전송되었습니다.");
+  searchParams.delete("submitted");
+
+  const nextUrl =
+    searchParams.toString().length > 0
+      ? `${window.location.pathname}?${searchParams.toString()}${window.location.hash}`
+      : `${window.location.pathname}${window.location.hash}`;
+
+  window.history.replaceState({}, "", nextUrl);
 }
